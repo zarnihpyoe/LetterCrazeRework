@@ -9,6 +9,8 @@ package player.entity;
  */
 public class Letter {
 
+	public static final Letter EMPTY = new Letter("", 0);
+	
 	private final String character;
 	private final int points;
 	

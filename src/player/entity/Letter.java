@@ -9,22 +9,19 @@ package player.entity;
  */
 public class Letter {
 
-	private final char letter;
+	private final String character;
 	private final int points;
 	
 	
-	public Letter(char letter, int points)
+	public Letter(String letter, int points)
 	{
-		this.letter = letter;
+		this.character = letter.toUpperCase();
 		this.points = points;
 	}
 
 	
-	public char getLetter() { return letter; }
+	// getters and setters
+	public String getChar() { return character; }
 	public int getPoints() { return points; }
 
-	
-	
-	
-	
 }

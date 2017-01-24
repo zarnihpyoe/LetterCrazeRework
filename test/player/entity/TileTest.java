@@ -35,5 +35,13 @@ public class TileTest {
 		assertEquals("E", tile.getChar());
 		assertEquals(1, tile.getPoints());
 	}
+	
+	@Test
+	public void createTileWithRandomLetter()
+	{
+		assertNull(tile.getLetter());
+		tile.setRandomLetter(LetterGenerator.getInstance());
+		assertNotNull(tile.getLetter());
+	}
 
 }

@@ -16,6 +16,12 @@ public class Tile {
 		
 	}
 
+	
+	public void setRandomLetter(LetterGenerator lg)
+	{
+		letter = lg.generateRandomLetter();
+	}
+	
 	public String getChar() { return letter.getChar(); }
 	public int getPoints() {return letter.getPoints(); }
 	

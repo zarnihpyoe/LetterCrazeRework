@@ -19,11 +19,19 @@ public class LetterTest {
 	 * 
 	 */
 	@Test
-	public void createLetterENotNull() 
+	public void createLetterE() 
 	{
 		assertNotNull(letter);
 		assertEquals("E", letter.getChar());
 		assertEquals(1, letter.getPoints());
+	}
+	
+	@Test
+	public void generateRandomLetterNotNull() {
+		letter = LetterGenerator.getInstance().generateRandomLetter();
+		assertNotNull(letter);
+		letter = LetterGenerator.getInstance().generateRandomLetter();
+		assertNotNull(letter);
 	}
 	
 

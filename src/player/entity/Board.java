@@ -6,6 +6,8 @@ package player.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import dictionary.EngDictionary;
+
 /**
  * @author Zarni Phyo
  *
@@ -90,8 +92,12 @@ public class Board {
 	
 	public boolean isValidWord()
 	{
-		// TODO : add dictionary check
-		return true;
+		StringBuilder sb = new StringBuilder();
+		for(int i : selectedTiles) {
+			sb.append(tiles[i].getChar());
+		}
+		String theWord = sb.toString();
+		return EngDictionary.isWord(theWord);
 	}
 	
 	public boolean isAdjacent(int i, int j)

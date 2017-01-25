@@ -51,7 +51,7 @@ public class BoardTest {
 	@Test
 	public void isValidWord()
 	{
-		assertTrue(tb.isValidWord());
+		// TODO : add test for isValidWord
 	}
 	
 	@Test

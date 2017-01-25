@@ -10,8 +10,7 @@ package entity;
 public class ScoreBoard {
 	
 	private final int first, second, third;
-	private int currentScore;
-//	private int currentStars;
+	private int score;
 	
 	public ScoreBoard(int first, int second, int third)
 	{
@@ -22,14 +21,14 @@ public class ScoreBoard {
 
 	public void updateScore(int delta)
 	{
-		currentScore += delta;
+		score += delta;
 	}
 	
 	public int getStars()
 	{
-		if(currentScore < first) return 0;
-		if(currentScore < second) return 1;
-		if(currentScore < third) return 2;
+		if(score < first) return 0;
+		if(score < second) return 1;
+		if(score < third) return 2;
 		return 3;
 	}
 	
@@ -40,7 +39,7 @@ public class ScoreBoard {
 
 	public int getThird() {	return third; }
 
-	public int getCurrentScore() { return currentScore; }
+	public int getScore() { return score; }
 
 //	public int getCurrentStars() { return currentStars; }
 

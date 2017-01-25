@@ -47,8 +47,8 @@ public class LevelTest {
 		populateBoard();
 		selectFRAGMENT();
 		level.removeWordAndUpdateScore();
-		assertEquals(19, level.getSb().getCurrentScore());
-		assertEquals(1, level.getSb().getStars());
+		assertEquals(19, level.getScore());
+		assertEquals(1, level.getStars());
 		assertEquals(19, level.getHighScore());
 	}
 	
@@ -64,19 +64,18 @@ public class LevelTest {
 		tb.setLetterToTile(lg, "E", 14);
 		tb.setLetterToTile(lg, "N", 8);
 		tb.setLetterToTile(lg, "T", 2);
-		tb.fillRandomLetters();
 	}
 	
 	public void selectFRAGMENT()
 	{
-		tb.select(0);
-		tb.select(6);
-		tb.select(12);
-		tb.select(13);
-		tb.select(19);
-		tb.select(14);
-		tb.select(8);
-		tb.select(2);
+		level.selectTile(0);
+		level.selectTile(6);
+		level.selectTile(12);
+		level.selectTile(13);
+		level.selectTile(19);
+		level.selectTile(14);
+		level.selectTile(8);
+		level.selectTile(2);
 	}
 
 }

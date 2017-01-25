@@ -60,7 +60,6 @@ public class Board {
 				tiles[i].extractLetter();
 			}
 			applyGravity();
-			fillRandomLetters();
 		}
 		selectedTiles.clear();
 		return score;

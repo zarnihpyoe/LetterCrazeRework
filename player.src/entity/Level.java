@@ -23,6 +23,7 @@ public class Level {
 		this.sb = sb;
 		this.locked = locked;
 		this.highScore = highScore;
+		initialize();
 	}
 	
 	public Level (int lvl, Board b, ScoreBoard sb)
@@ -30,20 +31,38 @@ public class Level {
 		this(lvl, b, sb, lvl>3, 0);
 	}
 	
+	public void initialize()
+	{
+		b.fillRandomLetters();
+	}
+	
 	public void removeWordAndUpdateScore()
 	{
 		sb.updateScore(b.removeWord());
 		// update high score if current score is higher
-		if(sb.getCurrentScore() > highScore) {
-			highScore = sb.getCurrentScore();
+		if(sb.getScore() > highScore) {
+			highScore = sb.getScore();
 		}
+		b.fillRandomLetters();
+	}
+	
+	public void selectTile(int i)
+	{
+		b.select(i);
+	}
+	
+	public int getScore()
+	{
+		return sb.getScore();
+	}
+	
+	public int getStars()
+	{
+		return sb.getStars();
 	}
 
+	// getters and setters
 	public int getLvl() { return lvl; }
-
-	public Board getB() { return b; }
-
-	public ScoreBoard getSb() { return sb; }
 
 	public boolean isLocked() { return locked; }
 	public void unLocked() { this.locked = false; }

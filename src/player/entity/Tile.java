@@ -9,8 +9,8 @@ package player.entity;
  */
 public class Tile {
 	
-	protected Letter letter;
-	protected Tile below;
+	private Letter letter;
+	private Tile below;
 	
 	public Tile()
 	{

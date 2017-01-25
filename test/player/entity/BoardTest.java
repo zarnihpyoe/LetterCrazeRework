@@ -51,7 +51,9 @@ public class BoardTest {
 	@Test
 	public void isValidWord()
 	{
-		// TODO : add test for isValidWord
+		populateBoard();
+		selectFRAGMENT();
+		assertTrue(tb.isValidWord());
 	}
 	
 	@Test
@@ -78,6 +80,57 @@ public class BoardTest {
 		tb.select(7);
 		tb.select(14);
 		assertTrue(tb.isValidSelection());
+	}
+	
+	@Test
+	public void isTheWordValid_Valid()
+	{
+		populateBoard();
+		selectFRAGMENT();
+		assertTrue(tb.isTheWordValid());
+	}
+	
+	@Test
+	public void isTheWordValid_NonValid()
+	{
+		populateBoard();
+		selectFRAGMENT();
+		tb.select(6);
+		assertFalse(tb.isTheWordValid());
+	}
+	
+	@Test
+	public void removeWord()
+	{
+		populateBoard();
+		selectFRAGMENT();
+		assertEquals(19, tb.removeWord());
+	}
+	
+	public void populateBoard()
+	{
+		LetterGenerator lg = LetterGenerator.getInstance();
+		tb.setLetterToTile(lg, "F", 0);
+		tb.setLetterToTile(lg, "R", 6);
+		tb.setLetterToTile(lg, "A", 12);
+		tb.setLetterToTile(lg, "G", 13);
+		tb.setLetterToTile(lg, "M", 19);
+		tb.setLetterToTile(lg, "E", 14);
+		tb.setLetterToTile(lg, "N", 8);
+		tb.setLetterToTile(lg, "T", 2);
+		tb.fillRandomLetters();
+	}
+	
+	public void selectFRAGMENT()
+	{
+		tb.select(0);
+		tb.select(6);
+		tb.select(12);
+		tb.select(13);
+		tb.select(19);
+		tb.select(14);
+		tb.select(8);
+		tb.select(2);
 	}
 	
 	

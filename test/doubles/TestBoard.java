@@ -4,6 +4,7 @@
 package doubles;
 
 import player.entity.Board;
+import player.entity.LetterGenerator;
 import player.entity.Tile;
 
 /**
@@ -26,6 +27,18 @@ public class TestBoard extends Board {
 			if(t.isEmpty()) { return false; }
 		}
 		return true;
+	}
+	
+	public void setLetterToTile(LetterGenerator lg, String character, int i)
+	{
+		try
+		{
+			tiles[i].setLetter(lg.get(character));
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 }

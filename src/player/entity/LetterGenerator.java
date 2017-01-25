@@ -75,5 +75,65 @@ public class LetterGenerator {
 		return letters.get(0);		// will never happens
 	}
 	
+	public Letter get(String letter) throws LetterGeneratorException
+	{
+		letter = letter.toUpperCase();
+		switch(letter) {
+			case "E":
+				return letters.get(0);
+			case "T":
+				return letters.get(1);
+			case "A":
+				return letters.get(2);
+			case "O":
+				return letters.get(3);
+			case "I":
+				return letters.get(4);
+			case "N":
+				return letters.get(5);
+			case "S":
+				return letters.get(6);
+			case "H":
+				return letters.get(7);
+			case "R":
+				return letters.get(8);
+			case "D":
+				return letters.get(9);
+			case "L":
+				return letters.get(10);
+			case "C":
+				return letters.get(11);
+			case "U":
+				return letters.get(12);
+			case "M":
+				return letters.get(13);
+			case "W":
+				return letters.get(14);
+			case "F":
+				return letters.get(15);
+			case "G":
+				return letters.get(16);
+			case "Y":
+				return letters.get(17);
+			case "P":
+				return letters.get(18);
+			case "B":
+				return letters.get(19);
+			case "V":
+				return letters.get(20);
+			case "K":
+				return letters.get(21);
+			case "J":
+				return letters.get(22);
+			case "X":
+				return letters.get(23);
+			case "Q":
+				return letters.get(24);
+			case "Z":
+				return letters.get(25);
+		}
+		throw new LetterGeneratorException("Cannot generate " + letter + " letter.");
+	}
+	
 
 }

@@ -51,20 +51,23 @@ public class Board {
 	}
 	
 	// not tested yet
-	public final void removeWord()
+	public final int removeWord()
 	{
+		int score = 0;
 		if(isTheWordValid()) {
 			for(int i : selectedTiles) {
+				score += tiles[i].getPoints();
 				tiles[i].extractLetter();
 			}
 			applyGravity();
 			fillRandomLetters();
 		}
 		selectedTiles.clear();
+		return score;
 	}
 	
 	// not tested yet
-	private final boolean isTheWordValid()
+	public final boolean isTheWordValid()
 	{
 		return isValidSelection() && isValidWord();
 	}

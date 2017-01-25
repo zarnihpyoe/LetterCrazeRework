@@ -8,6 +8,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import entity.ScoreBoard;
+
 /**
  * @author Zarni Phyo
  *

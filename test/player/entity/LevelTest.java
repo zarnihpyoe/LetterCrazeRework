@@ -9,6 +9,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import doubles.TestBoard;
+import entity.LetterGenerator;
+import entity.Level;
+import entity.ScoreBoard;
 
 /**
  * @author Zarni Phyo

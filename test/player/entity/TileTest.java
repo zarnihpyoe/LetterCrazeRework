@@ -8,6 +8,10 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import entity.Letter;
+import entity.LetterGenerator;
+import entity.Tile;
+
 /**
  * @author Zarni Phyo
  *

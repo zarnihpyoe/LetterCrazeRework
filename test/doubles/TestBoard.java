@@ -3,9 +3,9 @@
  */
 package doubles;
 
-import player.entity.Board;
-import player.entity.LetterGenerator;
-import player.entity.Tile;
+import entity.Board;
+import entity.LetterGenerator;
+import entity.Tile;
 
 /**
  * @author Zarni Phyo

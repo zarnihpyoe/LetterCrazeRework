@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import doubles.TestBoard;
+import entity.LetterGenerator;
 
 /**
  * @author Zarni Phyo

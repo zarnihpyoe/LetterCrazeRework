@@ -1,4 +1,4 @@
-package player.entity;
+package entity;
 
 public class LetterGeneratorException extends Exception {
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package player.entity;
+package entity;
 
 /**
  * @author Zarni Phyo
